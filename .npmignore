@@ -1,0 +1,19 @@
+# Build config (not needed by consumers)
+tsconfig.json
+tsup.config.ts
+
+# Dev files
+node_modules/
+*.log
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Tests (if any)
+__tests__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
