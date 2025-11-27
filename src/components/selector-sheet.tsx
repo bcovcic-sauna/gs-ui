@@ -7,15 +7,15 @@ import { X } from "lucide-react"
 
 import { cn } from "../utils/utils"
 
-const Sheet = SheetPrimitive.Root
+const SelectorSheet = SheetPrimitive.Root
 
-const SheetTrigger = SheetPrimitive.Trigger
+const SelectorSheetTrigger = SheetPrimitive.Trigger
 
-const SheetClose = SheetPrimitive.Close
+const SelectorSheetClose = SheetPrimitive.Close
 
-const SheetPortal = SheetPrimitive.Portal
+const SelectorSheetPortal = SheetPrimitive.Portal
 
-const SheetOverlay = React.forwardRef<
+const SelectorSheetOverlay = React.forwardRef<
   React.ComponentRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
@@ -28,9 +28,9 @@ const SheetOverlay = React.forwardRef<
     ref={ref}
   />
 ))
-SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
+SelectorSheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
-const sheetVariants = cva(
+const selectorSheetVariants = cva(
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
@@ -49,62 +49,61 @@ const sheetVariants = cva(
   },
 )
 
-interface SheetContentProps
+interface SelectorSheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
-    VariantProps<typeof sheetVariants> {}
+    VariantProps<typeof selectorSheetVariants> {}
 
-const SheetContent = React.forwardRef<React.ComponentRef<typeof SheetPrimitive.Content>, SheetContentProps>(
+const SelectorSheetContent = React.forwardRef<React.ComponentRef<typeof SheetPrimitive.Content>, SelectorSheetContentProps>(
   ({ side = "right", className, children, ...props }, ref) => (
-    <SheetPortal>
-      <SheetOverlay />
-      <SheetPrimitive.Content ref={ref} className={cn(sheetVariants({ side }), className)} {...props}>
+    <SelectorSheetPortal>
+      <SelectorSheetOverlay />
+      <SheetPrimitive.Content ref={ref} className={cn(selectorSheetVariants({ side }), className)} {...props}>
         {children}
         <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
           <X className="h-4 w-4" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
-    </SheetPortal>
+    </SelectorSheetPortal>
   ),
 )
-SheetContent.displayName = SheetPrimitive.Content.displayName
+SelectorSheetContent.displayName = SheetPrimitive.Content.displayName
 
-const SheetHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+const SelectorSheetHeader = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn("flex flex-col space-y-2 text-center sm:text-left", className)} {...props} />
 )
-SheetHeader.displayName = "SheetHeader"
+SelectorSheetHeader.displayName = "SelectorSheetHeader"
 
-const SheetFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
+const SelectorSheetFooter = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)} {...props} />
 )
-SheetFooter.displayName = "SheetFooter"
+SelectorSheetFooter.displayName = "SelectorSheetFooter"
 
-const SheetTitle = React.forwardRef<
+const SelectorSheetTitle = React.forwardRef<
   React.ComponentRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title ref={ref} className={cn("text-lg font-semibold text-foreground", className)} {...props} />
 ))
-SheetTitle.displayName = SheetPrimitive.Title.displayName
+SelectorSheetTitle.displayName = SheetPrimitive.Title.displayName
 
-const SheetDescription = React.forwardRef<
+const SelectorSheetDescription = React.forwardRef<
   React.ComponentRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Description ref={ref} className={cn("text-sm text-muted-foreground", className)} {...props} />
 ))
-SheetDescription.displayName = SheetPrimitive.Description.displayName
+SelectorSheetDescription.displayName = SheetPrimitive.Description.displayName
 
 export {
-  Sheet,
-  SheetPortal,
-  SheetOverlay,
-  SheetTrigger,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
-  SheetDescription,
+  SelectorSheet,
+  SelectorSheetPortal,
+  SelectorSheetOverlay,
+  SelectorSheetTrigger,
+  SelectorSheetClose,
+  SelectorSheetContent,
+  SelectorSheetHeader,
+  SelectorSheetFooter,
+  SelectorSheetTitle,
+  SelectorSheetDescription,
 }
-
