@@ -1,6 +1,6 @@
 {
-  "name": "@bc-test/gs-ui",
-  "version": "1.0.0",
+  "name": "@bc-gs/gs-ui",
+  "version": "1.1.0",
   "description": "GS UI component library",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
@@ -60,8 +60,10 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "i18n-iso-countries": "^7.14.0",
     "lucide-react": "^0.447.0",
     "react-day-picker": "^9.11.0",
+    "recharts": "^2.15.0",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {

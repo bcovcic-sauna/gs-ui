@@ -30,6 +30,8 @@ export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from './comp
 
 // Menu Components
 export { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuCheckboxItem, DropdownMenuRadioItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuGroup, DropdownMenuPortal, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuRadioGroup } from './components/dropdown-menu';
+export { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarSeparator, MenubarLabel, MenubarCheckboxItem, MenubarRadioGroup, MenubarRadioItem, MenubarPortal, MenubarSubContent, MenubarSubTrigger, MenubarGroup, MenubarSub, MenubarShortcut } from './components/menubar';
+export { navigationMenuTriggerStyle, NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuContent, NavigationMenuTrigger, NavigationMenuLink, NavigationMenuIndicator, NavigationMenuViewport } from './components/navigation-menu';
 
 // Date Components
 export { Calendar, CalendarDayButton } from './components/calendar';
@@ -41,6 +43,14 @@ export { Avatar, AvatarImage, AvatarFallback } from './components/avatar';
 // Additional Components
 export { ButtonGroup } from './components/ButtonGroup';
 export { SelectorCheckbox } from './components/SelectorCheckbox';
+export { CountrySelect } from './components/country-select';
+
+// Selector Sheet (alternative sheet component)
+export { Sheet as SelectorSheet, SheetPortal as SelectorSheetPortal, SheetOverlay as SelectorSheetOverlay, SheetTrigger as SelectorSheetTrigger, SheetClose as SelectorSheetClose, SheetContent as SelectorSheetContent, SheetHeader as SelectorSheetHeader, SheetFooter as SelectorSheetFooter, SheetTitle as SelectorSheetTitle, SheetDescription as SelectorSheetDescription } from './components/selector-sheet';
+
+// Chart Components
+export { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent, ChartStyle } from './components/chart';
+export type { ChartConfig } from './components/chart';
 
 // Utils
 export { cn, isValidEmail, isNumber } from './utils/utils';
