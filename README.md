@@ -1,4 +1,4 @@
-# @bc-gs/gs-ui
+# @good-sign/ui
 
 A comprehensive React UI component library built with Radix UI, Tailwind CSS, and TypeScript. This package provides a complete set of accessible, customizable components for building modern web applications.
 
@@ -14,7 +14,7 @@ A comprehensive React UI component library built with Radix UI, Tailwind CSS, an
 ## Installation
 
 ```bash
-npm install @bc-gs/gs-ui
+npm install @good-sign/ui
 ```
 
 ## Setup
@@ -37,14 +37,14 @@ Create `scripts/copy-ui-components.cjs` in your project root:
 
 ```javascript
 /**
- * Post-install script to copy UI components from @bc-gs/gs-ui package
+ * Post-install script to copy UI components from @good-sign/ui package
  * to local components/ui directory.
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const PACKAGE_NAME = '@bc-gs/gs-ui';
+const PACKAGE_NAME = '@good-sign/ui';
 const PACKAGE_ROOT = path.join(__dirname, '..', 'node_modules', PACKAGE_NAME);
 const PACKAGE_SRC = path.join(PACKAGE_ROOT, 'src');
 const TARGET_DIR = path.join(__dirname, '..', 'components', 'ui');
@@ -357,7 +357,7 @@ const chartConfig = {
 When a new version is released, update the package:
 
 ```bash
-npm install @bc-gs/gs-ui@latest
+npm install @good-sign/ui@latest
 ```
 
 The postinstall script will automatically copy the updated components to your `components/ui` directory.

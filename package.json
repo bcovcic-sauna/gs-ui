@@ -1,7 +1,7 @@
 {
-  "name": "@bc-gs/gs-ui",
-  "version": "1.2.1",
-  "description": "GS UI component library",
+  "name": "@good-sign/ui",
+  "version": "1.0.0",
+  "description": "UI component library",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
@@ -32,7 +32,6 @@
     "react",
     "ui",
     "components",
-    "gs-ui"
   ],
   "author": "",
   "license": "ISC",
